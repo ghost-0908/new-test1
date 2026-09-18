@@ -3,7 +3,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "this" {
-  name     = "vive"
+  name     = "artizent"
   location = var.location
 }
 
@@ -39,7 +39,7 @@ resource "tls_private_key" "vm_admin" {
 }
 
 resource "azurerm_linux_virtual_machine" "this" {
-  name                            = "sonu"
+  name                            = "nous"
   location                        = var.location
   resource_group_name             = azurerm_resource_group.this.name
   size                            = "Standard_B2ats_v2"
@@ -53,7 +53,7 @@ resource "azurerm_linux_virtual_machine" "this" {
   }
 
   os_disk {
-    name                 = "sonu-osdisk"
+    name                 = "nous-osdisk"
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
   }
