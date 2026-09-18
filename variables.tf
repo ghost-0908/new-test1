@@ -1,5 +1,5 @@
 variable "location" {
-  description = "Azure region in which to create the resources."
+  description = "Azure region for the resources."
   type        = string
-  default     = "centralindia"
+  default     = "eastasia"
 }

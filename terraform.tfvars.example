@@ -1,2 +1,2 @@
-# Change this only if Standard_B2ats_v2 is unavailable in Central India.
-location = "centralindia"
+# Change this only if Standard_B2ats_v2 is unavailable in East Asia.
+location = "eastasia"
