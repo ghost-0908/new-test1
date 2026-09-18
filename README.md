@@ -1,13 +1,13 @@
-# Azure Linux VM `sonu`
+# Azure Linux VM `nous`
 
 This Terraform configuration creates a private Ubuntu Linux virtual machine and
 its required Azure networking:
 
-- Resource group `vive`
+- Resource group `artizent`
 - Virtual network `arti-vnet` (`10.0.0.0/16`)
 - Subnet `arti-subnet` (`10.0.1.0/24`)
 - Network interface `arti-nic` with a dynamic private IP
-- Linux VM `sonu` using `Standard_B2ats_v2`
+- Linux VM `nous` using `Standard_B2ats_v2`
 - Ubuntu 22.04 LTS Gen2 and SSH-key-only authentication
 
 No public IP or inbound internet rule is created. Connecting to this VM requires
