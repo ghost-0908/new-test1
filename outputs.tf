@@ -1,5 +1,5 @@
 output "resource_group_name" {
-  description = "Resource group containing the VM."
+  description = "Name of the created resource group."
   value       = azurerm_resource_group.this.name
 }
 
@@ -8,12 +8,12 @@ output "vm_name" {
   value       = azurerm_linux_virtual_machine.this.name
 }
 
-output "public_ip_address" {
-  description = "Public IPv4 address of the VM."
-  value       = azurerm_public_ip.this.ip_address
+output "private_ip_address" {
+  description = "Private IP address assigned to the VM network interface."
+  value       = azurerm_network_interface.this.private_ip_address
 }
 
-output "ssh_command" {
-  description = "Command to connect to the VM with the matching private key."
-  value       = "ssh -i ${trimsuffix(pathexpand(var.ssh_public_key_path), ".pub")} ${var.admin_username}@${azurerm_public_ip.this.ip_address}"
+output "ssh_public_key" {
+  description = "Generated SSH public key installed on the VM."
+  value       = tls_private_key.vm_admin.public_key_openssh
 }

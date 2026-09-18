@@ -3,20 +3,19 @@ mock_provider "azurerm" {}
 run "student_vm_plan" {
   command = plan
 
-  variables {
-    subscription_id           = "00000000-0000-0000-0000-000000000000"
-    ssh_source_address_prefix = "203.0.113.10/32"
-    ssh_public_key_path       = "tests/fixtures/test-key.pub"
+  assert {
+    condition     = azurerm_resource_group.this.name == "vive"
+    error_message = "The resource group name must be vive."
   }
 
   assert {
-    condition     = azurerm_resource_group.this.name == "artizent"
-    error_message = "The default resource group name must be artizent."
+    condition     = azurerm_linux_virtual_machine.this.name == "sonu"
+    error_message = "The VM name must be sonu."
   }
 
   assert {
-    condition     = azurerm_linux_virtual_machine.this.name == "nous"
-    error_message = "The default VM name must be nous."
+    condition     = azurerm_linux_virtual_machine.this.size == "Standard_B2ats_v2"
+    error_message = "The VM size must be Standard_B2ats_v2."
   }
 
   assert {
