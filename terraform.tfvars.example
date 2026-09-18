@@ -1,0 +1,15 @@
+# Find this with: az account show --query id --output tsv
+subscription_id = "00000000-0000-0000-0000-000000000000"
+
+# Replace this example with your current public IP followed by /32.
+# Do not use 0.0.0.0/0 unless you intentionally want SSH open to the internet.
+ssh_source_address_prefix = "203.0.113.10/32"
+
+# These values already match the requested names and can be omitted.
+resource_group_name = "artizent"
+vm_name            = "nous"
+location           = "centralindia"
+vm_size            = "Standard_B1s"
+
+# Terraform expands ~ on Windows, macOS, and Linux.
+ssh_public_key_path = "~/.ssh/azure_nous.pub"
