@@ -66,3 +66,4 @@ resource "azurerm_linux_virtual_machine" "this" {
     version   = "latest"
   }
 }
+# Comment-only Developer→Operator workflow verification
