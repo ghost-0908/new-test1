@@ -56,6 +56,7 @@ resource "azurerm_linux_virtual_machine" "this" {
     name                 = "nous-osdisk"
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
+    disk_size_gb = 32
   }
 
   source_image_reference {
