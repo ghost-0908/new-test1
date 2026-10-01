@@ -3,7 +3,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "this" {
-  name     = "ram"
+  name     = "raju"
   location = var.location
 }
 
