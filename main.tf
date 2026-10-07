@@ -3,7 +3,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "this" {
-  name     = "soumyacppptr"
+  name     = "soum"
   location = var.location
 }
 
